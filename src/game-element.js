@@ -19,7 +19,7 @@ class GameElement extends HTMLElement
 
     formatValue(val)
     {
-        if(val instanceof "string")
+        if((typeof val === "string") || (val instanceof String))
         {
             return val;
         }
