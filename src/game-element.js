@@ -6,3 +6,5 @@ class GameElement extends HTMLElement
     }
 }
 window.customElements.define("game-element", GameElement);
+let ge = new GameElement();
+$("body").append(ge);
