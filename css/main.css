@@ -57,6 +57,7 @@ body
 .board
 {
     display: block;
+    position: relative;
 
     /* As an item in a flex container */
 }
