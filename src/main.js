@@ -1,10 +1,10 @@
 $(document).ready(function()
 {
     console.log("Ready.");
-    $.getScript("src/game-element.js", function()
-    {
-        console.log("success.");
-    });
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "src/game-element.js";
+    $("head").append(s);
     let ge = new GameElement();
     $("body").append(ge);
 });
