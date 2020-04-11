@@ -4,7 +4,9 @@ $(document).ready(function()
     let board = new Board();
     board.build();
     $("body").append(board);
-    $("body").click(dragScroll);
+    $("body").on("mousedown", startDragScroll);
+    $("body").on("mouseup", stopDragScroll);
+    $("body").on("mousemove", dragScroll);
 });
 
 function loadClassDefinitions()
@@ -24,7 +26,23 @@ function getScriptTag(src)
     return elementClass;
 }
 
+let drag = false;
+let initialX;
+let initialY;
+function startDragScroll(event)
+{
+    initialX = event.pageX;
+    initialY = event.pageY;
+    drag = true;
+}
 function dragScroll(event)
 {
-    console.log("X: " + event.pageX + " Y: " + event.pageY);
+    if(drag)
+    {
+        window.scrollBy(initialX - event.pageX, initialY - event.pageY);
+    }
+}
+function stopDragScroll()
+{
+    drag = false;
 }

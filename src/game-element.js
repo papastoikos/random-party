@@ -60,7 +60,7 @@ class GameElement extends HTMLElement
         return false;
     }
 
-    hide()
+    hideEl()
     {
         if(this.style.display === this.displayType)
         {
@@ -68,7 +68,7 @@ class GameElement extends HTMLElement
         }
     }
 
-    show()
+    showEl()
     {
         if(this.style.display !== this.displayType)
         {
@@ -76,7 +76,7 @@ class GameElement extends HTMLElement
         }
     }
 
-    toggleDisplay()
+    toggleEl()
     {
         if(this.style.display === this.displayType)
         {
