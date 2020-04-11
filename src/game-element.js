@@ -3,10 +3,10 @@ class GameElement extends HTMLElement
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super();
-        this.height = formatValue(height);
-        this.width = formatValue(width);
-        this.top = formatValue(top);
-        this.left = formatValue(left);
+        this.height = this.formatValue(height);
+        this.width = this.formatValue(width);
+        this.top = this.formatValue(top);
+        this.left = this.formatValue(left);
     }
 
     build()
@@ -23,7 +23,7 @@ class GameElement extends HTMLElement
         {
             return val;
         }
-        else if( !(isNaN(val)) )
+        else if(!(isNaN(val)))
         {
             return val + "px";
         }
