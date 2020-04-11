@@ -5,4 +5,6 @@ $(document).ready(function()
     {
         console.log("success.");
     });
+    let ge = new GameElement();
+    $("body").append(ge);
 });
