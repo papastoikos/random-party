@@ -1,5 +1,6 @@
 class GameElement extends HTMLElement
 {
+    displayType = "block";
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super();
@@ -15,6 +16,7 @@ class GameElement extends HTMLElement
         this.style.width = this.formatValue(this.width);
         this.style.top = this.formatValue(this.top);
         this.style.left = this.formatValue(this.left);
+        this.style.display = this.displayType;
     }
 
     formatValue(val)
@@ -27,6 +29,35 @@ class GameElement extends HTMLElement
         {
             return val + "vmin";
         }
+    }
+
+    addCssClass(cssClass)
+    {
+        if(this.hasCssClass(cssClass))
+        {
+            return false;
+        }
+        this.classList.add(cssClass);
+        return true;
+    }
+
+    removeCssClass(cssClass)
+    {
+        if(this.hasCssClass(cssClass))
+        {
+            this.classList.remove(cssClass);
+            return true;
+        }
+        return false;
+    }
+
+    hasCssClass(cssClass)
+    {
+        if(this.classList.contains(cssClass))
+        {
+            return true;
+        }
+        return false;
     }
 }
 window.customElements.define("game-element", GameElement);

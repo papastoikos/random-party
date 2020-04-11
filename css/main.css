@@ -9,7 +9,24 @@ body
     height: 100vh;
     width: 100vw;
 }
+
 .board
 {
     display: block;
+}
+
+.tile
+{
+    display: block;
+    position: absolute;
+}
+
+.tile-type-one
+{
+    background-color: beige;
+}
+
+.tile-type-two
+{
+    background-color: gainsboro;
 }
