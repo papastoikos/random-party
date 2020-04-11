@@ -7,9 +7,9 @@ $(document).ready(function()
     screen.build();
     $("body").append(sidebar);
     $("body").append(screen);
-    $("body").on("mousedown", startDragScroll);
-    $("body").on("mouseup", stopDragScroll);
-    $("body").on("mousemove", dragScroll);
+    $(window).on("mousedown", startDragScroll);
+    $(window).on("mouseup", stopDragScroll);
+    $(window).on("mousemove", dragScroll);
 });
 
 function loadClassDefinitions()
