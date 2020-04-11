@@ -1,9 +1,23 @@
 $(document).ready(function()
 {
-    let gameElementClass = document.createElement("script");
-    gameElementClass.type = "text/javascript";
-    gameElementClass.src = "src/game-element.js";
-    $("head").append(gameElementClass);
-    let ge = new GameElement();
-    $("body").append(ge);
+    loadClassDefinitions();
+    let gameElement = new GameElement();
+    let board = new BoardElement();
+    $("body").append(gameElement);
+    $("body").append(board);
 });
+
+function loadClassDefinitions()
+{
+    $("head").append(getScriptTag("src/game-element.js"));
+    $("head").append(getScriptTag("src/board-element.js"));
+}
+
+function getScriptTag(src)
+{
+    let elementClass;
+    elementClass = document.createElement("script");
+    elementClass.type = "text/javascript";
+    elementClass.src = src;
+    return elementClass;
+}
