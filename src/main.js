@@ -34,6 +34,7 @@ function startDragScroll(event)
     initialX = event.pageX;
     initialY = event.pageY;
     drag = true;
+    console.log("X: " + initialX + ", Y: " + initialY);
 }
 function dragScroll(event)
 {
