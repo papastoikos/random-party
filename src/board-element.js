@@ -1,12 +1,8 @@
 class Board extends GameElement
 {
-    constructor(rows, columns, tileHeight, tileWidth, top = "auto", left = "auto")
+    constructor(top = "auto", left = "auto")
     {
-        super(top, left, (rows * tileHeight), (columns * tileWidth));
-        this.rows = rows;
-        this.columns = columns;
-        this.tileHeight = this.formatValue(tileHeight);
-        this.tileWidth = this.formatValue(tileWidth);
+        super((BOARD_ROWS * TILE_HEIGHT), (BOARD_COLUMNS * TILE_WIDTH), top, left);
     }
 }
 window.customElements.define("board-element", Board);

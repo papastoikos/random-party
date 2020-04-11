@@ -1,20 +1,14 @@
-// GAME VALUES
-const BOARD_ROWS = 7;
-const BOARD_COLUMNS = 7;
-const TILE_HEIGHT = 50;
-const TILE_WIDTH = 50;
-
 $(document).ready(function()
 {
     loadClassDefinitions();
-    let board = new Board(BOARD_ROWS, BOARD_COLUMNS, TILE_HEIGHT, TILE_WIDTH);
+    let board = new Board();
     board.build();
-    $("body").append(gameElement);
     $("body").append(board);
 });
 
 function loadClassDefinitions()
 {
+    $("head").append(getScriptTag("src/game-constants.js"));
     $("head").append(getScriptTag("src/game-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
 }
