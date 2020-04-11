@@ -4,6 +4,7 @@ $(document).ready(function()
     let board = new Board();
     board.build();
     $("body").append(board);
+    $("body").click(dragScroll);
 });
 
 function loadClassDefinitions()
@@ -21,4 +22,9 @@ function getScriptTag(src)
     elementClass.type = "text/javascript";
     elementClass.src = src;
     return elementClass;
+}
+
+function dragScroll(event)
+{
+    console.log("X: " + event.pageX + " Y: " + event.pageY);
 }
