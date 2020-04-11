@@ -5,4 +5,4 @@ class GameElement extends HTMLElement
         super();
     }
 }
-window.customElements.define("game-element", GameElement)
+window.customElements.define("game-element", GameElement);
