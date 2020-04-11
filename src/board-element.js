@@ -11,7 +11,7 @@ class Board extends GameElement
     {
         super.build();
         this.id = "board";
-        $(this).addClass(BOARD_CLASS);
+        this.addCssClass(BOARD_CLASS);
         this.buildTiles();
     }
 
@@ -25,11 +25,11 @@ class Board extends GameElement
                 tile.build();
                 if(isEven(x + y))
                 {
-                    tile.addClass(TILE_TYPE_ONE_CLASS);
+                    tile.addCssClass(TILE_TYPE_ONE_CLASS);
                 }
                 else
                 {
-                    tile.addClass(TILE_TYPE_TWO_CLASS);
+                    tile.addCssClass(TILE_TYPE_TWO_CLASS);
                 }
                 this.tileMap.set(tile.id, tile);
                 this.appendChild(tile);
