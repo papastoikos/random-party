@@ -25,7 +25,7 @@ class GameElement extends HTMLElement
         }
         else if(!(isNaN(val)))
         {
-            return val + "px";
+            return val + "vh";
         }
     }
 }
