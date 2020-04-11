@@ -2,7 +2,7 @@ $(document).ready(function()
 {
     loadClassDefinitions();
     let board = new Board();
-    // board.build();
+    board.build();
     $("body").append(board);
 });
 
@@ -11,6 +11,7 @@ function loadClassDefinitions()
     $("head").append(getScriptTag("src/game-constants.js"));
     $("head").append(getScriptTag("src/game-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
+    $("head").append(getScriptTag("src/tile-element.js"));
 }
 
 function getScriptTag(src)
