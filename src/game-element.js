@@ -3,18 +3,18 @@ class GameElement extends HTMLElement
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super();
-        this.height = this.formatValue(height);
-        this.width = this.formatValue(width);
-        this.top = this.formatValue(top);
-        this.left = this.formatValue(left);
+        this.height = height;
+        this.width = width;
+        this.top = top;
+        this.left = left;
     }
 
     build()
     {
-        this.style.height = this.height;
-        this.style.width = this.width;
-        this.style.top = this.top;
-        this.style.left = this.left;
+        this.style.height = this.formatValue(this.height);
+        this.style.width = this.formatValue(this.width);
+        this.style.top = this.formatValue(this.top);
+        this.style.left = this.formatValue(this.left);
     }
 
     formatValue(val)

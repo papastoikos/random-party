@@ -10,6 +10,7 @@ class Board extends GameElement
     {
         super.build();
         this.id = "board";
+        $(this).addClass(BOARD_CLASS);
     }
 }
 window.customElements.define("board-element", Board);
