@@ -27,7 +27,7 @@ class GameElement extends HTMLElement
         }
         else if(!(isNaN(val)))
         {
-            return val + "vmin";
+            return val + "px";
         }
     }
 
@@ -58,6 +58,34 @@ class GameElement extends HTMLElement
             return true;
         }
         return false;
+    }
+
+    hide()
+    {
+        if(this.style.display === this.displayType)
+        {
+            this.style.display = "none";
+        }
+    }
+
+    show()
+    {
+        if(this.style.display !== this.displayType)
+        {
+            this.style.display = this.displayType;
+        }
+    }
+
+    toggleDisplay()
+    {
+        if(this.style.display === this.displayType)
+        {
+            this.style.display = "none";
+        }
+        else
+        {
+            this.style.display = this.displayType;
+        }
     }
 }
 window.customElements.define("game-element", GameElement);

@@ -1,8 +1,8 @@
 // GAME VALUES
 const BOARD_ROWS = 7;
 const BOARD_COLUMNS = 7;
-const TILE_HEIGHT = 10;
-const TILE_WIDTH = 10;
+const TILE_HEIGHT = 70;
+const TILE_WIDTH = 70;
 
 // CSS CLASSES
 const BOARD_CLASS = "board";
