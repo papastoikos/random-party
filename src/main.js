@@ -5,9 +5,6 @@ $(document).ready(function()
     sidebar.build();
     let screen = new Screen();
     screen.build();
-    let board = new Board();
-    board.build();
-    $("#screen").append(board);
     $("body").append(sidebar);
     $("body").append(screen);
     $("body").on("mousedown", startDragScroll);
