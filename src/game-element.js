@@ -3,6 +3,7 @@ class GameElement extends HTMLElement
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super();
+        // An HTMLElement's DOM attribute can't be modified in its constructor.
         this.height = this.formatValue(height);
         this.width = this.formatValue(width);
         this.top = this.formatValue(top);

@@ -2,7 +2,7 @@ $(document).ready(function()
 {
     loadClassDefinitions();
     let board = new Board();
-    board.build();
+    // board.build();
     $("body").append(board);
 });
 
