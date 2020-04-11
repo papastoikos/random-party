@@ -5,6 +5,8 @@ const TILE_HEIGHT = 70;
 const TILE_WIDTH = 70;
 
 // CSS CLASSES
+const SIDEBAR_CLASS = "sidebar";
+const SCREEN_CLASS = "screen";
 const BOARD_CLASS = "board";
 const TILE_CLASS = "tile";
 const TILE_TYPE_ONE_CLASS = "tile-type-one";

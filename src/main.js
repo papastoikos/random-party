@@ -1,9 +1,15 @@
 $(document).ready(function()
 {
     loadClassDefinitions();
+    let sidebar = new Sidebar();
+    sidebar.build();
+    let screen = new Screen();
+    screen.build();
     let board = new Board();
     board.build();
-    $("body").append(board);
+    $("#screen").append(board);
+    $("body").append(sidebar);
+    $("body").append(screen);
     $("body").on("mousedown", startDragScroll);
     $("body").on("mouseup", stopDragScroll);
     $("body").on("mousemove", dragScroll);
@@ -13,6 +19,8 @@ function loadClassDefinitions()
 {
     $("head").append(getScriptTag("src/game-constants.js"));
     $("head").append(getScriptTag("src/game-element.js"));
+    $("head").append(getScriptTag("src/sidebar-element.js"));
+    $("head").append(getScriptTag("src/screen-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
     $("head").append(getScriptTag("src/tile-element.js"));
 }
