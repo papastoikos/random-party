@@ -2,7 +2,7 @@ $(document).ready(function()
 {
     loadClassDefinitions();
     let gameElement = new GameElement();
-    let board = new BoardElement();
+    let board = new Board();
     $("body").append(gameElement);
     $("body").append(board);
 });
