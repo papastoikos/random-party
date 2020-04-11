@@ -25,7 +25,6 @@ class GameElement extends HTMLElement
         }
         else if(!(isNaN(val)))
         {
-            console.log(typeof val);
             return val + "vh";
         }
     }
