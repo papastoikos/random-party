@@ -51,7 +51,7 @@ body
 
     /* As an item in a flex container */
     order: 2;
-    flex: 5 1;
+    flex: 7 1;
 }
 
 .board
