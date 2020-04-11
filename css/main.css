@@ -40,7 +40,7 @@ body
 
 .screen
 {
-    background-color: orangered;
+    background-color: ivory;
 
     /* As a flex container */
     display: flex;
@@ -75,5 +75,5 @@ body
 
 .tile-type-two
 {
-    background-color: grey;
+    background-color: dimgrey;
 }
