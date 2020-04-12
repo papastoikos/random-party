@@ -3,7 +3,7 @@ class SidebarItem extends GameElement
     displayType = "flex";
     elementType = "sidebar-item";
     imageURL = "url('" + CUBE_URL + "')";
-    constructor(name, height = 100, width = 100, top = "auto", left = "auto")
+    constructor(name, height = 50, width = 50, top = "auto", left = "auto")
     {
         super(height, width, top, left);
         this.name = name;
