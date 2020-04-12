@@ -34,7 +34,6 @@ body
 
     /* As an item in a flex container */
     order: 1;
-    flex: 1 1;
 }
 
 .sidebar-item
@@ -60,7 +59,7 @@ body
 
     /* As an item in a flex container */
     order: 2;
-    flex: 9 1;
+    flex: 1;
 }
 
 .board
