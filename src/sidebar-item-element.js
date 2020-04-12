@@ -30,8 +30,8 @@ class SidebarItem extends GameElement
     {
         let controlPanel = document.getElementById("control-panel");
         console.log(controlPanel);
-        console.log(this.diceTable);
-        controlPanel.toggleContent(this.diceTable);
+        console.log(this.dicetable);
+        controlPanel.toggleContent(this.dicetable);
     }
 }
 window.customElements.define("sidebar-item-element", SidebarItem);
