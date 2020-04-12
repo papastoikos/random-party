@@ -23,14 +23,14 @@ class ControlPanel extends GameElement
     {
         this.clear();
         this.appendChild(content);
-        this.show();
+        this.showEl();
     }
 
     toggleContent(content)
     {
         if(content === this.firstChild)
         {
-            this.clear();
+            this.clearEl();
             return false;
         }
         else
