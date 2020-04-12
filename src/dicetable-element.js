@@ -12,7 +12,6 @@ class Dicetable extends GameElement
         super.build();
         this.id = "dicetable";
         this.addCssClass(DICETABLE_CLASS);
-        // this.hideEl();
     }
 }
 window.customElements.define("dicetable-element", Dicetable);
