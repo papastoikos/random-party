@@ -2,6 +2,7 @@
 {
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
 
 body
@@ -66,8 +67,8 @@ body
 .control-panel
 {
     background-color: gainsboro;
-
     position: fixed;
+    z-index: 1;
 
     /* As a flex container */
     display: flex;
