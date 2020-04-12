@@ -29,16 +29,14 @@ class ControlPanel extends GameElement
     {
         if(content === this.firstChild)
         {
-            this.hideEl();
+            $(this).animate({height: "50px"}, 1000);
             this.clear();
-            this.style.height = this.formatValue(0);
-            this.showEl();
             return false;
         }
         else
         {
             this.setContent(content);
-            this.style.height = this.formatValue(CONTROL_PANEL_HEIGHT);
+            $(this).animate({height: CONTROL_PANEL_HEIGHT}, 1000);
             this.showEl();
             return true;
         }
