@@ -7,7 +7,8 @@ $(document).ready(function()
     screen.build();
     $("body").append(sidebar);
     $("body").append(screen);
-    $(`#${screen.controlPanel.id}`).draggable();
+    console.log(`#${screen.controlPanel.id}`);
+    $("#control-panel").draggable();
 });
 
 function init()
