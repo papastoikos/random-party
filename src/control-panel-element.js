@@ -23,20 +23,23 @@ class ControlPanel extends GameElement
     {
         this.clear();
         this.appendChild(content);
-        this.style.height = this.formatValue(CONTROL_PANEL_HEIGHT);
-        this.showEl();
     }
 
     toggleContent(content)
     {
         if(content === this.firstChild)
         {
+            this.hideEl();
             this.clear();
+            this.style.height = this.formatValue(50);
+            this.showEl();
             return false;
         }
         else
         {
             this.setContent(content);
+            this.style.height = this.formatValue(CONTROL_PANEL_HEIGHT);
+            this.showEl();
             return true;
         }
     }
@@ -45,13 +48,10 @@ class ControlPanel extends GameElement
     {
         if(this.childNodes.length > 0)
         {
-            this.hideEl();
             while(this.firstChild)
             {
                 this.removeChild(this.lastChild);
             }
-            this.style.height = this.formatValue(50);
-            this.showEl();
         }
     }
 
