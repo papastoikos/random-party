@@ -39,6 +39,7 @@ body
 .sidebar-item
 {
     background-color: midnightblue;
+    padding-top: 10px;
     /* As a flex container */
     display: flex;
 

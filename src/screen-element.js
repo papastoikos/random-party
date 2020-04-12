@@ -21,5 +21,8 @@ class Screen extends GameElement
         this.board.build();
         this.appendChild(this.board);
     }
+
+    buildDicetable()
+    {}
 }
 window.customElements.define("screen-element", Screen);

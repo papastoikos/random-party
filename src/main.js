@@ -1,16 +1,21 @@
 $(document).ready(function()
 {
-    loadClassDefinitions();
+    init();
     let sidebar = new Sidebar();
     sidebar.build();
     let screen = new Screen();
     screen.build();
     $("body").append(sidebar);
     $("body").append(screen);
+});
+
+function init()
+{
+    loadClassDefinitions();
     $("body").on("mousedown", startDragScroll);
     $("body").on("mouseup", stopDragScroll);
     $("body").on("mousemove", dragScroll);
-});
+}
 
 function loadClassDefinitions()
 {
@@ -18,6 +23,7 @@ function loadClassDefinitions()
     $("head").append(getScriptTag("src/game-element.js"));
     $("head").append(getScriptTag("src/tile-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
+    $("head").append(getScriptTag("src/dicetable-element.js"));
     $("head").append(getScriptTag("src/sidebar-item-element.js"));
     $("head").append(getScriptTag("src/sidebar-element.js"));
     $("head").append(getScriptTag("src/screen-element.js"));
