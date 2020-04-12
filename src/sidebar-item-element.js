@@ -3,7 +3,7 @@ class SidebarItem extends GameElement
     displayType = "flex";
     elementType = "sidebar-item";
     imageURL = `url('${CUBE_URL}')`;
-    dicetable = new Dicetable();
+    dicetable;
     constructor(name, height = 50, width = 50, top = "auto", left = "auto")
     {
         super(height, width, top, left);
@@ -19,11 +19,18 @@ class SidebarItem extends GameElement
         this.style.backgroundSize = "contain";
         this.style.backgroundRepeat = "no-repeat";
         this.style.backgroundPosition = "center center";
+        this.buildDicetable();
         this.addEventListener(
             "click",
             this.toggleDicetable,
             true
         );
+    }
+
+    buildDicetable()
+    {
+        this.dicetable = new Dicetable();
+        this.dicetable.build();
     }
 
     toggleDicetable(event)
