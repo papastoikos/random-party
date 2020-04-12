@@ -30,7 +30,7 @@ class ControlPanel extends GameElement
     {
         if(content === this.firstChild)
         {
-            this.clearEl();
+            this.clear();
             return false;
         }
         else
@@ -44,7 +44,7 @@ class ControlPanel extends GameElement
     {
         if(this.childNodes.length > 0)
         {
-            this.hide();
+            this.hideEl();
             while(this.firstChild)
             {
                 this.removeChild(this.lastChild);
