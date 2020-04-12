@@ -50,8 +50,8 @@ class ControlPanel extends GameElement
             {
                 this.removeChild(this.lastChild);
             }
-            this.showEl();
             this.style.height = this.formatValue(50);
+            this.showEl();
         }
     }
 
