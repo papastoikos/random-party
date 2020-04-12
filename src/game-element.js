@@ -1,6 +1,11 @@
 class GameElement extends HTMLElement
 {
     displayType = "block";
+    drag = false;
+    initialTop;
+    initialLeft;
+    pointerDX;
+    pointerDY;
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super();
@@ -86,6 +91,78 @@ class GameElement extends HTMLElement
         {
             this.style.display = this.displayType;
         }
+    }
+
+    makeDraggable()
+    {
+        this.addEventListener(
+            "mousedown",
+            this.startDrag.bind(this),
+            true
+        );
+    }
+
+    startDrag(event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+        if(event.target.id !== this.id)
+        {
+            return;
+        }
+        this.drag = true;
+        this.initialTop = parseFloat(this.offsetTop);
+        this.pointerDY = event.clientY - this.initialTop;
+        this.initialLeft = parseFloat(this.offsetLeft);
+        this.pointerDX = event.clientX - this.initialLeft;
+        this.addEventListener(
+            "mouseup",
+            this.stopDrag.bind(this),
+            true
+        );
+        this.addEventListener(
+            "mouseleave",
+            this.stopDrag.bind(this),
+            true
+        );
+        this.addEventListener(
+            "mousemove",
+            this.dragMove.bind(this),
+            true
+        );
+    }
+
+    dragMove(event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+        if(this.drag)
+        {
+            this.style.top = this.formatValue((event.clientY - this.pointerDY));
+            this.style.left = this.formatValue((event.clientX - this.pointerDX));
+        }
+    }
+    
+    stopDrag(event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+        this.drag = false;
+        this.removeEventListener(
+            "mouseup",
+            this.stopDrag,
+            true
+        );
+        this.removeEventListener(
+            "mouseleave",
+            this.stopDrag,
+            true
+        );
+        this.removeEventListener(
+            "mousemove",
+            this.dragMove,
+            true
+        );
     }
 }
 window.customElements.define("game-element", GameElement);
