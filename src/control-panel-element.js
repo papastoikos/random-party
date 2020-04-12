@@ -36,7 +36,7 @@ class ControlPanel extends GameElement
         else
         {
             this.setContent(content);
-            $(this).animate({height: CONTROL_PANEL_HEIGHT}, 400);
+            $(this).animate({height: CONTROL_PANEL_HEIGHT}, 100);
             return true;
         }
     }
