@@ -36,7 +36,7 @@ class ControlPanel extends GameElement
         this.initialTop = parseFloat(this.offsetTop);
         this.pointerDY = event.clientY - this.initialTop;
         this.initialLeft = parseFloat(this.offsetLeft);
-        this.pointerDX = event.clientX = this.initialLeft;
+        this.pointerDX = event.clientX - this.initialLeft;
         this.addEventListener(
             "mouseup",
             true
