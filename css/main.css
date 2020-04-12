@@ -41,10 +41,12 @@ body
 .sidebar-item
 {
     background-color: midnightblue;
+    /* As a flex container */
+    display: flex;
 
     /* As an item in a flex container */
     order: 1;
-    flex: 1 1;
+    flex: 1;
 }
 
 .screen
