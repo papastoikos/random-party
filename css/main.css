@@ -29,9 +29,8 @@ body
     /* As a flex container */
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    align-content: flex-start;
+    align-items: center;
+    align-content: center;
 
     /* As an item in a flex container */
     order: 1;
