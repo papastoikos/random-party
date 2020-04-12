@@ -47,6 +47,11 @@ class ControlPanel extends GameElement
             true
         );
         this.addEventListener(
+            "mouseleave",
+            this.stopDrag.bind(this),
+            true
+        );
+        this.addEventListener(
             "mousemove",
             this.dragMove.bind(this),
             true
@@ -73,6 +78,11 @@ class ControlPanel extends GameElement
         this.drag = false;
         this.removeEventListener(
             "mouseup",
+            this.stopDrag,
+            true
+        );
+        this.removeEventListener(
+            "mouseleave",
             this.stopDrag,
             true
         );
