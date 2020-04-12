@@ -71,7 +71,7 @@ body
 
     /* As an item in a flex container */
     order: 1;
-    flex: 1 2;
+    flex: 1;
 }
 
 .tile
