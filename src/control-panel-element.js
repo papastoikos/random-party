@@ -39,6 +39,7 @@ class ControlPanel extends GameElement
         this.pointerDX = event.clientX - this.initialLeft;
         this.addEventListener(
             "mouseup",
+            this.stopDrag.bind(this),
             true
         );
         this.addEventListener(
