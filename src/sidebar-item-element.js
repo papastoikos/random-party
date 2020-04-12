@@ -2,7 +2,7 @@ class SidebarItem extends GameElement
 {
     displayType = "flex";
     elementType = "sidebar-item";
-    imageURL = "url('" + CUBE_URL + "')";
+    imageURL = `url('${CUBE_URL}')`;
     constructor(name, height = 50, width = 50, top = "auto", left = "auto")
     {
         super(height, width, top, left);
@@ -12,7 +12,7 @@ class SidebarItem extends GameElement
     build()
     {
         super.build();
-        this.id = this.elementType + "-" + this.name;
+        this.id = `${this.elementType}-${this.name}`;
         this.addCssClass(SIDEBAR_ITEM_CLASS);
         this.style.backgroundImage = this.imageURL;
         this.style.backgroundSize = "contain";

@@ -13,7 +13,7 @@ class Tile extends GameElement
     build()
     {
         super.build();
-        this.id = this.elementType + "-" + "y" + this.y + "x" + this.x;
+        this.id = `${this.elementType}-y${this.y}x${this.x}`;
         this.addCssClass(TILE_CLASS);
     }
 }
