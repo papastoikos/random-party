@@ -23,6 +23,7 @@ class ControlPanel extends GameElement
     {
         this.clear();
         this.appendChild(content);
+        this.show();
     }
 
     toggleContent(content)
@@ -34,8 +35,7 @@ class ControlPanel extends GameElement
         }
         else
         {
-            this.clear();
-            this.appendChild(content);
+            this.setContent(content);
             return true;
         }
     }
@@ -44,6 +44,7 @@ class ControlPanel extends GameElement
     {
         if(this.childNodes.length > 0)
         {
+            this.hide();
             while(this.firstChild)
             {
                 this.removeChild(this.lastChild);
