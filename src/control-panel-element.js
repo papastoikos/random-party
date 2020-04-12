@@ -31,7 +31,7 @@ class ControlPanel extends GameElement
         {
             this.hideEl();
             this.clear();
-            this.style.height = this.formatValue(50);
+            this.style.height = this.formatValue(0);
             this.showEl();
             return false;
         }
