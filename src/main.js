@@ -7,7 +7,7 @@ $(document).ready(function()
     screen.build();
     $("body").append(sidebar);
     $("body").append(screen);
-    $("#controlPanel").draggable();
+    $(`#${screen.controlPanel.id}`).draggable();
 });
 
 function init()
