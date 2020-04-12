@@ -14,7 +14,7 @@ class Tile extends GameElement
     {
         super.build();
         this.id = this.elementType + "-" + "y" + this.y + "x" + this.x;
-        $(this).addClass(TILE_CLASS);
+        this.addCssClass(TILE_CLASS);
     }
 }
 window.customElements.define("tile-element", Tile);

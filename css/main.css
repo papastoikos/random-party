@@ -38,6 +38,21 @@ body
     flex: 1 1;
 }
 
+.sidebar-item
+{
+    background-color: midnightblue;
+
+    /* As a flex container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    /* As an item in a flex container */
+    order: 1;
+    flex: 1 1;
+}
+
 .screen
 {
     background-color: ivory;
@@ -61,6 +76,7 @@ body
     border: 4px solid black;
 
     /* As an item in a flex container */
+    flex: 1 1;
 }
 
 .tile
