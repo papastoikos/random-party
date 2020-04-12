@@ -19,6 +19,36 @@ class ControlPanel extends GameElement
         this.makeDraggable();
     }
 
+    setContent(content)
+    {
+        this.clear();
+        this.appendChild(content);
+    }
+
+    toggleContent(content)
+    {
+        if(content === this.firstChild)
+        {
+            this.clear();
+        }
+        else
+        {
+            this.clear();
+            this.appendChild(content);
+        }
+    }
+
+    clear()
+    {
+        if(this.childNodes.length > 0)
+        {
+            while(this.firstChild)
+            {
+                this.removeChild(this.lastChild);
+            }
+        }
+    }
+
     makeDraggable()
     {
         this.addEventListener(
@@ -64,8 +94,6 @@ class ControlPanel extends GameElement
         event.stopPropagation();
         if(this.drag)
         {
-            this.innerHTML = `element-x: ${event.clientX - this.pointerDX}, element-y: ${event.clientY - this.pointerDY}`;
-            this.innerHTML = `cursor-x: ${event.clientX}, cursor-y: ${event.clientY}`;
             this.style.top = this.formatValue((event.clientY - this.pointerDY));
             this.style.left = this.formatValue((event.clientX - this.pointerDX));
         }
@@ -94,21 +122,3 @@ class ControlPanel extends GameElement
     }
 }
 window.customElements.define("control-panel-element", ControlPanel);
-
-function mouseDown(event)
-{
-    let drag = true;
-}
-
-function mouseMove(event)
-{
-    if(drag)
-    {
-        // move along with cursor.
-    }
-}
-
-function mouseUp()
-{
-    let drag = false;
-}

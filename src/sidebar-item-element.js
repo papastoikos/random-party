@@ -18,6 +18,18 @@ class SidebarItem extends GameElement
         this.style.backgroundSize = "contain";
         this.style.backgroundRepeat = "no-repeat";
         this.style.backgroundPosition = "center center";
+        this.addEventListener(
+            "click",
+            this.toggleDicetable,
+            true
+        );
+    }
+
+    toggleDicetable(event)
+    {
+        let controlPanel = document.getElementById("control-panel");
+        let diceTable = document.getElementById("dicetable");
+        controlPanel.toggleContent(diceTable);
     }
 }
 window.customElements.define("sidebar-item-element", SidebarItem);
