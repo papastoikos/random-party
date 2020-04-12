@@ -63,6 +63,37 @@ body
     flex: 1;
 }
 
+.control-panel
+{
+    background-color: gainsboro;
+
+    position: fixed;
+
+    /* As a flex container */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
+}
+
+.dicetable
+{
+    background-color: black;
+
+    /* As a flex container */
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.dice
+{
+    display: flex;
+}
+
 .board
 {
     display: block;

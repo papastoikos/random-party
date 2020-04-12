@@ -2,6 +2,7 @@ class Screen extends GameElement
 {
     displayType = "flex";
     board;
+    controlPanel;
     constructor(height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super(height, width, top, left);
@@ -13,6 +14,7 @@ class Screen extends GameElement
         this.id = "screen";
         this.addCssClass(SCREEN_CLASS);
         this.buildBoard();
+        this.buildControlPanel();
     }
 
     buildBoard()
@@ -22,7 +24,11 @@ class Screen extends GameElement
         this.appendChild(this.board);
     }
 
-    buildDicetable()
-    {}
+    buildControlPanel()
+    {
+        this.controlPanel = new ControlPanel((this.offsetHeight - CONTROL_PANEL_HEIGHT), (this.offsetWidth - CONTROL_PANEL_WIDTH));
+        this.controlPanel.build();
+        this.appendChild(this.controlPanel);
+    }
 }
 window.customElements.define("screen-element", Screen);

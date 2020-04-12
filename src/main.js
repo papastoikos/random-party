@@ -23,6 +23,7 @@ function loadClassDefinitions()
     $("head").append(getScriptTag("src/game-element.js"));
     $("head").append(getScriptTag("src/tile-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
+    $("head").append(getScriptTag("src/control-panel-element.js"));
     $("head").append(getScriptTag("src/dicetable-element.js"));
     $("head").append(getScriptTag("src/sidebar-item-element.js"));
     $("head").append(getScriptTag("src/sidebar-element.js"));
