@@ -55,8 +55,8 @@ class ControlPanel extends GameElement
         event.stopPropagation();
         if(this.drag)
         {
-            console.log(`element-x: ${event.clientX - this.pointerDX}, element-y: ${event.clientY - this.pointerDY}`);
-            console.log(`cursor-x: ${event.clientX}, cursor-y: ${event.clientY}`);
+            this.innerHTML = `element-x: ${event.clientX - this.pointerDX}, element-y: ${event.clientY - this.pointerDY}`;
+            this.innerHTML = `cursor-x: ${event.clientX}, cursor-y: ${event.clientY}`;
         }
     }
     
