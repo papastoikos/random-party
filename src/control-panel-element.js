@@ -6,7 +6,7 @@ class ControlPanel extends GameElement
     initialLeft;
     pointerDX;
     pointerDY;
-    constructor(top = "auto", left = "auto", height = CONTROL_PANEL_HEIGHT, width = CONTROL_PANEL_WIDTH)
+    constructor(top = "auto", left = "auto", height = 0, width = CONTROL_PANEL_WIDTH)
     {
         super(height, width, top, left);
     }
@@ -29,7 +29,7 @@ class ControlPanel extends GameElement
     {
         if(content === this.firstChild)
         {
-            $(this).animate({height: "50px"}, 1000);
+            $(this).animate({height: "0px"}, 1000);
             this.clear();
             return false;
         }
