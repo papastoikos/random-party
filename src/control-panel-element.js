@@ -32,6 +32,10 @@ class ControlPanel extends GameElement
     {
         event.preventDefault();
         event.stopPropagation();
+        if(event.target.id !== this.id)
+        {
+            return;
+        }
         this.drag = true;
         this.initialTop = parseFloat(this.offsetTop);
         this.pointerDY = event.clientY - this.initialTop;
@@ -57,6 +61,8 @@ class ControlPanel extends GameElement
         {
             this.innerHTML = `element-x: ${event.clientX - this.pointerDX}, element-y: ${event.clientY - this.pointerDY}`;
             this.innerHTML = `cursor-x: ${event.clientX}, cursor-y: ${event.clientY}`;
+            this.style.top = this.formatValue((event.clientY - this.pointerDY));
+            this.style.left = this.formatValue((event.clientX - this.pointerDX));
         }
     }
     
