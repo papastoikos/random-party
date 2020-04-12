@@ -5,9 +5,9 @@ $(document).ready(function()
     sidebar.build();
     let screen = new Screen();
     screen.build();
-    $("#controlPanel").draggable();
     $("body").append(sidebar);
     $("body").append(screen);
+    $("#controlPanel").draggable();
 });
 
 function init()
