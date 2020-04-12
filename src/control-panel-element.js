@@ -31,12 +31,14 @@ class ControlPanel extends GameElement
         if(content === this.firstChild)
         {
             this.clear();
+            return false;
         }
         else
         {
             this.clear();
             this.appendChild(content);
             this.style.height = this.formatValue(CONTROL_PANEL_HEIGHT);
+            return true;
         }
     }
 
