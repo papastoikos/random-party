@@ -2,7 +2,7 @@ class Sidebar extends GameElement
 {
     displayType = "flex";
     buttonMap = new Map();
-    constructor(height = "100vh", width = "auto", top = "auto", left = "auto")
+    constructor(height = "100vh", width = "auto", top = 0, left = 0)
     {
         super(height, width, top, left);
     }
