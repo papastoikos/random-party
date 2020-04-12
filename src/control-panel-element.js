@@ -16,7 +16,6 @@ class ControlPanel extends GameElement
         super.build();
         this.id = "control-panel";
         this.addCssClass(CONTROL_PANEL_CLASS);
-        this.innerHTML = "Control Panel";
         this.makeDraggable();
     }
 
