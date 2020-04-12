@@ -22,6 +22,7 @@ class GameElement extends HTMLElement
         this.style.top = this.formatValue(this.top);
         this.style.left = this.formatValue(this.left);
         this.style.display = this.displayType;
+        this.makeDraggable();
     }
 
     formatValue(val)
