@@ -80,9 +80,8 @@ class ControlPanel extends GameElement
 
     startDrag(event)
     {
-        console.log(this);
         event.preventDefault();
-        event.stopPropagation();
+        console.log(this.id);
         if(event.target.id !== this.id)
         {
             return;
@@ -107,6 +106,7 @@ class ControlPanel extends GameElement
             this.dragMove.bind(this),
             true
         );
+        event.stopPropagation();
     }
 
     dragMove(event)
