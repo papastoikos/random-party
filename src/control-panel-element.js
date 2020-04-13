@@ -1,6 +1,7 @@
 class ControlPanel extends GameElement
 {
     displayType = "flex";
+    titleBar;
     drag = false;
     initialTop;
     initialLeft;
@@ -17,6 +18,16 @@ class ControlPanel extends GameElement
         this.id = "control-panel";
         this.addCssClass(CONTROL_PANEL_CLASS);
         this.makeDraggable();
+        this.buildTitleBar();
+    }
+
+    buildTitleBar()
+    {
+        this.titleBar = new GameElement(CONTROL_PANEL_TITLE_BAR_HEIGHT);
+        this.titleBar.build();
+        this.titleBar.style.backgroundColor = "gainsboro";
+        this.titleBar.innerHTML = "Control Panel";
+        this.appendChild(this.titleBar);
     }
 
     setContent(content)
@@ -27,7 +38,7 @@ class ControlPanel extends GameElement
 
     toggleContent(content)
     {
-        if(content === this.firstChild)
+        if(content === this.childNodes[1])
         {
             this.clear();
             return false;
@@ -41,12 +52,9 @@ class ControlPanel extends GameElement
 
     clear()
     {
-        if(this.childNodes.length > 0)
+        while(this.childNodes.length > 1)
         {
-            while(this.firstChild)
-            {
-                this.removeChild(this.lastChild);
-            }
+            this.removeChild(this.lastChild);
         }
     }
 
