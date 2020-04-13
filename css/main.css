@@ -98,7 +98,17 @@ body
 
 .dice
 {
+    background-color: purple;
+
+    /* As a flex container */
     display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    /* As an item in a flex container */
+    order: 1;
+    flex: 1;
 }
 
 .board
