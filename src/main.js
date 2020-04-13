@@ -19,6 +19,7 @@ function loadClassDefinitions()
     $("head").append(getScriptTag("src/tile-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
     $("head").append(getScriptTag("src/control-panel-element.js"));
+    $("head").append(getScriptTag("src/summon-control-panel-element.js"));
     // $("head").append(getScriptTag("src/dice-element.js"));
     // $("head").append(getScriptTag("src/dicetable-element.js"));
     $("head").append(getScriptTag("src/sidebar-item-element.js"));
