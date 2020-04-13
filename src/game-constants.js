@@ -17,6 +17,7 @@ const SIDEBAR_CLASS = "sidebar";
 const SIDEBAR_ITEM_CLASS = "sidebar-item";
 const SCREEN_CLASS = "screen";
 const CONTROL_PANEL_CLASS = "control-panel";
+const SUMMON_CONTROL_PANEL_CLASS = "summon-control-panel";
 const DICETABLE_CLASS = "dicetable";
 const DICE_CLASS = "dice";
 const BOARD_CLASS = "board";

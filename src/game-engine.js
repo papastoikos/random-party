@@ -38,6 +38,6 @@ class GameEngine
 
     toggleSummonInterface(event)
     {
-        this.screen.controlPanel.toggleContent("Hello world.");
+        this.screen.controlPanel.toggleContent(this.playerOne.summonControlPanel);
     }
 }
