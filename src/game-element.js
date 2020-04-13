@@ -87,5 +87,14 @@ class GameElement extends HTMLElement
             this.style.display = this.displayType;
         }
     }
+
+    toggleHighlight()
+    {
+        if(this.removeCssClass(HIGHLIGHT_CLASS))
+        {
+            return;
+        }
+        this.addCssClass(HIGHLIGHT_CLASS);
+    }
 }
 window.customElements.define("game-element", GameElement);

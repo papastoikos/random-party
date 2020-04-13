@@ -24,6 +24,7 @@ const BOARD_CLASS = "board";
 const TILE_CLASS = "tile";
 const TILE_TYPE_ONE_CLASS = "tile-type-one";
 const TILE_TYPE_TWO_CLASS = "tile-type-two";
+const HIGHLIGHT_CLASS = "highlight";
 
 // ASSETS
 const CUBE_URL = "assets/spellbook.svg";

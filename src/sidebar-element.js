@@ -28,7 +28,7 @@ class Sidebar extends GameElement
     {
         if(this.oldSelection !== false)
         {
-            this.oldSelection.removeCssClass("highlight");
+            this.oldSelection.toggleHighlight();
         }
         if(this.oldSelection === button)
         {
@@ -36,7 +36,7 @@ class Sidebar extends GameElement
             return;
         }
         this.oldSelection = button;
-        button.addCssClass("highlight");
+        button.toggleHighlight();
     }
 }
 window.customElements.define("sidebar-element", Sidebar);
