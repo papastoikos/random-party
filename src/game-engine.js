@@ -14,6 +14,7 @@ class GameEngine
         this.playerOne = new Player("player-one");
         this.playerTwo = new Player("player-two");
         this.buildAssets();
+        this.addEventListeners();
     }
 
     buildAssets()

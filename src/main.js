@@ -2,7 +2,6 @@ $(document).ready(function()
 {
     init();
     let engine = new GameEngine();
-    console.log(engine.playerOne.name);
 });
 
 function init()
