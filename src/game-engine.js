@@ -25,4 +25,18 @@ class GameEngine
         document.body.appendChild(this.sidebar);
         document.body.appendChild(this.screen);
     }
+
+    addEventListeners()
+    {
+        this.sidebar.buttonMap.get(SUMMON_CONTROL_BUTTON_ID).addEventListener(
+            "click",
+            this.toggleSummonInterface.bind(this),
+            true
+        );
+    }
+
+    toggleSummonInterface(event)
+    {
+        this.screen.controlPanel.toggleContent("Hello world.");
+    }
 }

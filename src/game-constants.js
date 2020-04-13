@@ -26,3 +26,6 @@ const TILE_TYPE_TWO_CLASS = "tile-type-two";
 
 // ASSETS
 const CUBE_URL = "assets/cube-svgrepo-com.svg";
+
+// STRINGS
+const SUMMON_CONTROL_BUTTON_ID = "summon-control-button";

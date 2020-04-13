@@ -17,7 +17,7 @@ class Sidebar extends GameElement
 
     buildSummonControlButton()
     {
-        let summonControlButton = new SummonControlButton("summon-control-button", SUMMON_CONTROL_BUTTON_HEIGHT, SUMMON_CONTROL_BUTTON_WIDTH);
+        let summonControlButton = new SummonControlButton(SUMMON_CONTROL_BUTTON_ID, SUMMON_CONTROL_BUTTON_HEIGHT, SUMMON_CONTROL_BUTTON_WIDTH);
         summonControlButton.build();
         this.buttonMap.set(summonControlButton.id, summonControlButton);
         this.appendChild(summonControlButton);
