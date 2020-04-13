@@ -71,6 +71,7 @@ body
     background-color: gainsboro;
     position: fixed;
     z-index: 2;
+    border: 2px solid #c4c4c4;
 
     /* As a flex container */
     display: flex;
