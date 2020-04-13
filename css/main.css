@@ -80,6 +80,23 @@ body
     align-content: center;
 }
 
+.control-panel-title
+{
+    box-sizing: border-box;
+    border: 2px solid #c4c4c4;
+
+    /* As a flex container */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    /* As an item in a flex container */
+    order: 1;
+    flex: 1;
+}
+
 .summon-control-panel
 {
     background-color: black;
