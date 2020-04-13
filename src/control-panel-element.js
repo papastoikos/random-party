@@ -82,7 +82,7 @@ class ControlPanel extends GameElement
     {
         event.preventDefault();
         console.log(this.id);
-        if(event.target.id !== this.id)
+        if(event.target.parentNode.id !== this.id)
         {
             return;
         }
