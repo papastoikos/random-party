@@ -26,7 +26,7 @@ class Sidebar extends GameElement
 
     highlightSelection(button)
     {
-        if(oldSelection !== false)
+        if(this.oldSelection !== false)
         {
             this.oldSelection.removeCssClass("highlight");
         }
