@@ -26,7 +26,7 @@ class ControlPanel extends GameElement
         this.titleBar = new GameElement();
         this.titleBar.build();
         this.titleBar.style.backgroundColor = "gainsboro";
-        this.titleBar.style.lineHeight = this.formatValue(CONTROL_PANEL_TITLE_BAR_HEIGHT);
+        // this.titleBar.style.lineHeight = this.formatValue(CONTROL_PANEL_TITLE_BAR_HEIGHT);
         this.titleBar.addCssClass("control-panel-title");
         this.titleBar.innerHTML = "Control Panel";
         this.appendChild(this.titleBar);
