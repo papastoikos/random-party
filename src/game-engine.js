@@ -38,6 +38,10 @@ class GameEngine
 
     toggleSummonInterface(event)
     {
-        this.screen.controlPanel.toggleContent(this.playerOne.summonControlPanel);
+        if(event.target instanceof SidebarItem)
+        {
+            this.sidebar.highlightSelection(event.target);
+            this.screen.controlPanel.toggleContent(this.playerOne.summonControlPanel);
+        }
     }
 }
