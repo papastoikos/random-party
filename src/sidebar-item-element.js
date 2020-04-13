@@ -3,7 +3,6 @@ class SidebarItem extends GameElement
     displayType = "flex";
     elementType = "sidebar-item";
     imageURL = `url('${CUBE_URL}')`;
-    dicetable;
     constructor(name, height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super(height, width, top, left);
@@ -19,24 +18,6 @@ class SidebarItem extends GameElement
         this.style.backgroundSize = "contain";
         this.style.backgroundRepeat = "no-repeat";
         this.style.backgroundPosition = "center center";
-        this.buildDicetable();
-        this.addEventListener(
-            "click",
-            this.toggleDicetable,
-            true
-        );
-    }
-
-    buildDicetable()
-    {
-        this.dicetable = new Dicetable();
-        this.dicetable.build();
-    }
-
-    toggleDicetable(event)
-    {
-        let controlPanel = document.getElementById("control-panel");
-        controlPanel.toggleContent(this.dicetable);
     }
 }
 window.customElements.define("sidebar-item-element", SidebarItem);

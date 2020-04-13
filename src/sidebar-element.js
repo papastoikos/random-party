@@ -12,15 +12,15 @@ class Sidebar extends GameElement
         super.build();
         this.id = "sidebar";
         this.addCssClass(SIDEBAR_CLASS);
-        this.buildDicetableButton();
+        this.buildSummonControlButton();
     }
 
-    buildDicetableButton()
+    buildSummonControlButton()
     {
-        let dicetableButton = new SidebarItem("dicetable-button", DICETABLE_BUTTON_HEIGHT, DICETABLE_BUTTON_WIDTH);
-        dicetableButton.build();
-        this.buttonMap.set(dicetableButton.id, dicetableButton);
-        this.appendChild(dicetableButton);
+        let summonControlButton = new SummonControlButton("summon-control-button", SUMMON_CONTROL_BUTTON_HEIGHT, SUMMON_CONTROL_BUTTON_WIDTH);
+        summonControlButton.build();
+        this.buttonMap.set(summonControlButton.id, summonControlButton);
+        this.appendChild(summonControlButton);
     }
 }
 window.customElements.define("sidebar-element", Sidebar);

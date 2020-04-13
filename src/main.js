@@ -1,12 +1,8 @@
 $(document).ready(function()
 {
     init();
-    let sidebar = new Sidebar();
-    sidebar.build();
-    let screen = new Screen();
-    screen.build();
-    $("body").append(sidebar);
-    $("body").append(screen);
+    let engine = new GameEngine();
+    console.log(engine.playerOne.name);
 });
 
 function init()
@@ -24,11 +20,14 @@ function loadClassDefinitions()
     $("head").append(getScriptTag("src/tile-element.js"));
     $("head").append(getScriptTag("src/board-element.js"));
     $("head").append(getScriptTag("src/control-panel-element.js"));
-    $("head").append(getScriptTag("src/dice-element.js"));
-    $("head").append(getScriptTag("src/dicetable-element.js"));
+    // $("head").append(getScriptTag("src/dice-element.js"));
+    // $("head").append(getScriptTag("src/dicetable-element.js"));
+    $("head").append(getScriptTag("src/summon-control-button-element.js"));
     $("head").append(getScriptTag("src/sidebar-item-element.js"));
     $("head").append(getScriptTag("src/sidebar-element.js"));
     $("head").append(getScriptTag("src/screen-element.js"));
+    $("head").append(getScriptTag("src/player.js"));
+    $("head").append(getScriptTag("src/game-engine.js"));
 }
 
 function getScriptTag(src)
