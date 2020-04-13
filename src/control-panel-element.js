@@ -68,7 +68,7 @@ class ControlPanel extends GameElement
     {
         this.titleBar.addEventListener(
             "mousedown",
-            this.startDrag.bind(document.getElementById("control-panel")),
+            this.startDrag.bind(this),
             true
         );
         // this.addEventListener(
@@ -80,6 +80,7 @@ class ControlPanel extends GameElement
 
     startDrag(event)
     {
+        console.log(this);
         event.preventDefault();
         event.stopPropagation();
         if(event.target.id !== this.id)
