@@ -71,17 +71,11 @@ class ControlPanel extends GameElement
             this.startDrag.bind(this),
             true
         );
-        // this.addEventListener(
-        //     "mousedown",
-        //     this.startDrag.bind(this),
-        //     true
-        // );
     }
 
     startDrag(event)
     {
         event.preventDefault();
-        console.log(this.id);
         if(event.target.parentNode.id !== this.id)
         {
             return;
