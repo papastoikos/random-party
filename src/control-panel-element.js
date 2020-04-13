@@ -18,7 +18,7 @@ class ControlPanel extends GameElement
         this.id = "control-panel";
         this.addCssClass(CONTROL_PANEL_CLASS);
         this.makeDraggable();
-        this.buildTitleBar();
+        // this.buildTitleBar();
     }
 
     buildTitleBar()
@@ -27,6 +27,8 @@ class ControlPanel extends GameElement
         this.titleBar.build();
         this.titleBar.style.backgroundColor = "gainsboro";
         this.titleBar.style.lineHeight = this.formatValue(50);
+        this.titleBar.style.order = 1;
+        this.titleBar.style.flex = 1;
         this.titleBar.innerHTML = "Control Panel";
         this.appendChild(this.titleBar);
     }

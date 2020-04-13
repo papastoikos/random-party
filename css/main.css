@@ -92,7 +92,8 @@ body
     align-content: center;
 
     /* As an item in a flex container */
-    flex: 1;
+    order: 2;
+    flex: 8;
 }
 
 .dice
