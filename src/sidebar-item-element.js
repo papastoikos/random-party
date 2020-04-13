@@ -36,8 +36,6 @@ class SidebarItem extends GameElement
     toggleDicetable(event)
     {
         let controlPanel = document.getElementById("control-panel");
-        console.log(controlPanel);
-        console.log(this.dicetable);
         controlPanel.toggleContent(this.dicetable);
     }
 }
