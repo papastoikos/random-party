@@ -24,6 +24,7 @@ class ControlPanel extends GameElement
     buildTitleBar()
     {
         this.titleBar = new GameElement();
+        this.titleBar.displayType = "flex";
         this.titleBar.build();
         this.titleBar.style.backgroundColor = "gainsboro";
         // this.titleBar.style.lineHeight = this.formatValue(CONTROL_PANEL_TITLE_BAR_HEIGHT);
