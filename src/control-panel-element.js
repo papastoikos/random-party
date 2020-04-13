@@ -7,7 +7,7 @@ class ControlPanel extends GameElement
     initialLeft;
     pointerDX;
     pointerDY;
-    constructor(top = "auto", left = "auto", height = CONTROL_PANEL_HEIGHT, width = CONTROL_PANEL_WIDTH)
+    constructor(top = "auto", left = "auto", height = CONTROL_PANEL_TITLE_BAR_HEIGHT, width = CONTROL_PANEL_WIDTH)
     {
         super(height, width, top, left);
     }
@@ -27,6 +27,7 @@ class ControlPanel extends GameElement
         this.titleBar.build();
         this.titleBar.style.backgroundColor = "gainsboro";
         this.titleBar.style.lineHeight = this.formatValue(50);
+        this.titleBar.style.padding = "0 0 0 10px";
         this.titleBar.style.order = 1;
         this.titleBar.style.flex = 1;
         this.titleBar.innerHTML = "Control Panel";
@@ -36,6 +37,7 @@ class ControlPanel extends GameElement
     setContent(content)
     {
         this.clear();
+        this.style.height = this.formatValue(CONTROL_PANEL_HEIGHT);
         this.appendChild(content);
     }
 
@@ -57,6 +59,7 @@ class ControlPanel extends GameElement
     {
         while(this.childNodes.length > 1)
         {
+            this.style.height = this.formatValue(CONTROL_PANEL_TITLE_BAR_HEIGHT);
             this.removeChild(this.lastChild);
         }
     }
