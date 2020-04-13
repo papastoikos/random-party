@@ -7,7 +7,7 @@ class ControlPanel extends GameElement
     initialLeft;
     pointerDX;
     pointerDY;
-    constructor(top = "auto", left = "auto", height = 0, width = CONTROL_PANEL_WIDTH)
+    constructor(top = "auto", left = "auto", height = CONTROL_PANEL_HEIGHT, width = CONTROL_PANEL_WIDTH)
     {
         super(height, width, top, left);
     }
@@ -18,7 +18,7 @@ class ControlPanel extends GameElement
         this.id = "control-panel";
         this.addCssClass(CONTROL_PANEL_CLASS);
         this.makeDraggable();
-        // this.buildTitleBar();
+        this.buildTitleBar();
     }
 
     buildTitleBar()
