@@ -23,10 +23,10 @@ class ControlPanel extends GameElement
 
     buildTitleBar()
     {
-        this.titleBar = new GameElement(CONTROL_PANEL_TITLE_BAR_HEIGHT);
+        this.titleBar = new GameElement();
         this.titleBar.build();
         this.titleBar.style.backgroundColor = "gainsboro";
-        this.titleBar.style.lineHeight = this.formatValue(50);
+        this.titleBar.style.lineHeight = this.formatValue(CONTROL_PANEL_TITLE_BAR_HEIGHT);
         this.titleBar.style.padding = "0 0 0 10px";
         this.titleBar.style.order = 1;
         this.titleBar.style.flex = 1;
@@ -66,11 +66,16 @@ class ControlPanel extends GameElement
 
     makeDraggable()
     {
-        this.addEventListener(
+        this.titleBar.addEventListener(
             "mousedown",
-            this.startDrag.bind(this),
+            this.startDrag.bind(document.getElementById(control-panel)),
             true
         );
+        // this.addEventListener(
+        //     "mousedown",
+        //     this.startDrag.bind(this),
+        //     true
+        // );
     }
 
     startDrag(event)
