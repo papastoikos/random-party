@@ -26,7 +26,7 @@ class Screen extends GameElement
 
     buildControlPanel()
     {
-        this.controlPanel = new ControlPanel((document.body.clientHeight - CONTROL_PANEL_HEIGHT), ((document.body.clientWidth - CONTROL_PANEL_WIDTH) / 2));
+        this.controlPanel = new ControlPanel();
         this.controlPanel.build();
         this.appendChild(this.controlPanel);
     }

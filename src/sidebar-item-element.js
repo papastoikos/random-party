@@ -4,7 +4,7 @@ class SidebarItem extends GameElement
     elementType = "sidebar-item";
     imageURL = `url('${CUBE_URL}')`;
     dicetable;
-    constructor(name, height = 50, width = 50, top = "auto", left = "auto")
+    constructor(name, height = "auto", width = "auto", top = "auto", left = "auto")
     {
         super(height, width, top, left);
         this.name = name;

@@ -17,7 +17,7 @@ class Sidebar extends GameElement
 
     buildDicetableButton()
     {
-        let dicetableButton = new SidebarItem("dicetable-button");
+        let dicetableButton = new SidebarItem("dicetable-button", DICETABLE_BUTTON_HEIGHT, DICETABLE_BUTTON_WIDTH);
         dicetableButton.build();
         this.buttonMap.set(dicetableButton.id, dicetableButton);
         this.appendChild(dicetableButton);

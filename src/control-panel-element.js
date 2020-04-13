@@ -7,7 +7,7 @@ class ControlPanel extends GameElement
     initialLeft;
     pointerDX;
     pointerDY;
-    constructor(top = "auto", left = "auto", height = CONTROL_PANEL_TITLE_BAR_HEIGHT, width = CONTROL_PANEL_WIDTH)
+    constructor(top = 0, left = DICETABLE_BUTTON_WIDTH, height = CONTROL_PANEL_TITLE_BAR_HEIGHT, width = CONTROL_PANEL_WIDTH)
     {
         super(height, width, top, left);
     }
