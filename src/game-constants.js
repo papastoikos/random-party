@@ -26,7 +26,7 @@ const TILE_TYPE_ONE_CLASS = "tile-type-one";
 const TILE_TYPE_TWO_CLASS = "tile-type-two";
 
 // ASSETS
-const CUBE_URL = "assets/cube-svgrepo-com.svg";
+const CUBE_URL = "assets/spellbook.svg";
 
 // STRINGS
 const SUMMON_CONTROL_BUTTON_ID = "summon-control-button";
