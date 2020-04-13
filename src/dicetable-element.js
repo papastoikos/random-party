@@ -12,6 +12,7 @@ class Dicetable extends GameElement
         super.build();
         this.id = "dicetable";
         this.addCssClass(DICETABLE_CLASS);
+        this.buildDice();
     }
 
     buildDice()
